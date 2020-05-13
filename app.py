@@ -44,7 +44,7 @@ def predict():
     x5=model_svc.predict(inputs)[0]
     #x6=model_xgb.predict(inputs)[0]
     c=[x1,x2,x3,x4,x5]
-    print(x1,x2,x3,x4,x5,c)
+    
     
     #inputs = [np.array(inputs)]
     #result=str(model.predict(inputs))
@@ -53,9 +53,7 @@ def predict():
         result='Demented'
     else:
         result='Non-Demented'
-    
-    print(result)
-    print(dic)
+
     return render_template('index.html', prediction_text='Your Result: '+result)
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
