@@ -39,14 +39,10 @@
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="#top" class="smoothScroll">Home</a></li>
                          <li><a href="#about" class="smoothScroll">Alzheimer's</a></li>   
-			 <li><a href="#symptoms" class="smoothScroll">Symptoms</a></li>
-			 <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Tests</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="../static/pdf/mmse_test.pdf" target="_blank">MMSE </a>
-					<a class="dropdown-item" href="../static/pdf/ses_test.pdf"target="_blank">SES</a>				
-				</div>
-			</li>
+						 <li><a href="#symptoms" class="smoothScroll">Symptoms</a></li>
+						 <li><a href="#tests" class="smoothScroll">Tests</a></li>
+						 
+						 
                          <li><a href="#" class="smoothScroll">About Us</a></li>                      
                          <li class="appointment-btn"><a href="#appointment"> Patient Details</a></li>
                     </ul>
@@ -127,6 +123,43 @@
                
           
      </section>
+	 
+	 <!-- Tests -->
+	 <section id="tests">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-6 col-sm-6" style=";padding-left:50px;padding-right:50px;padding-top:50px;padding-bottom:50px;" >
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Mini Mental State Examination</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s" style="margin-right:00px">
+							  
+                                   <p>The Mini-Mental State Examination (MMSE) or Folstein test is a 30-point questionnaire that is used extensively in clinical and research settings to measure cognitive impairment. It is commonly used in medicine and allied health to screen for dementia. </p>
+                                   <p>Advantages to the MMSE include requiring no specialized equipment or training for administration, and has both validity and reliability for the diagnosis and longitudinal assessment of Alzheimer's disease. Due to its short administration period and ease of use, it is useful for cognitive assessment in the clinician's office space or at the bedside.&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </p>
+								   <a href="../static/pdf/mmse_test.pdf"target="_blank" class="btn btn-success btn-lg btn-block" role="button">Start</a>
+								   
+									
+                              </div>
+							  </div>                          
+                         </div>
+					
+					<div class="col-md-6 col-sm-6" style=";padding-left:50px;padding-right:50px;padding-top:50px;padding-bottom:50px;" >
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Socioeconomic Status</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s" style="margin-right:00px">
+								   <p>Socioeconomic status is the social standing or class of an individual or group. It is often measured as a combination of education, income and occupation.</p>
+                                   <p>An individual's or group's position within a hierarchical social structure. Socioeconomic status depends on a combination of variables, including occupation, education, income, wealth, and place of residence. Sociologists often use socioeconomic status as a means of predicting behavior.</p>
+                                   <p>Socioeconomic status was an important modulator in this effect, with evidence that bilingualism may be particularly important in promoting speed of processing advantages in low status individuals but have little impact in high status individuals. </p>
+								   
+									<a href="../static/pdf/ses_test.pdf" target="_blank"class="btn btn-success btn-lg btn-block" role="button">Start</a>
+                              </div>
+							  </div>                          
+                         </div>
+					</div>
+            </div>  
+               
+          
+     </section>
+	 
      <!-- MAKE AN APPOINTMENT -->
      <section id="appointment" data-stellar-background-ratio="3">
           <div class="container">
@@ -198,7 +231,8 @@
                               </div>
                         </form>
                     </div>
-					<div id="result"><div class="col-lg-12 " >
+					<div id="result">
+					<div class="col-lg-12 " >
 					<div style="font-size:30px;width=100%;padding:0.2%;text-align:center;">
 					<samp>{{ prediction_text }}</samp></div>
 					</div></div>
