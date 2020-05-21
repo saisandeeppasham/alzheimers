@@ -50,7 +50,7 @@ def predict():
     #inputs = [np.array(inputs)]
     #result=str(model.predict(inputs))
     #print(model.predict(inputs))
-    if  model.predict(inputs)[0]==1:
+    if  model_et.predict(inputs)[0]==1:
         result='Demented'
     else:
         result='Non-Demented'
