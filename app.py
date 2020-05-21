@@ -7,7 +7,7 @@ model_ada = pickle.load(open('model_ada.pkl', 'rb'))
 model_et = pickle.load(open('model_et.pkl', 'rb'))
 model_rf = pickle.load(open('model_rf.pkl', 'rb'))
 model_svc = pickle.load(open('model_svc.pkl', 'rb'))
-#model_xgb = pickle.load(open('model_xgb.pkl', 'rb'))
+model_xgb = pickle.load(open('model_xgb.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
