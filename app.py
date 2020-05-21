@@ -38,12 +38,12 @@ def predict():
     inputs=[[i1,i2,i3,i4,i5,i6,i7,i8]]
     
     x1=model_gb.predict(inputs)[0]
-    x2=model_ada.predict(inputs)[0]
+    #x2=model_ada.predict(inputs)[0]
     x3=model_et.predict(inputs)[0]
     x4=model_rf.predict(inputs)[0]
-    x5=model_svc.predict(inputs)[0]
+    #x5=model_svc.predict(inputs)[0]
     #x6=model_xgb.predict(inputs)[0]
-    c=[x1,x2,x3,x4,x5]
+    c=[x1,x3,x4]
     
     
     #inputs = [np.array(inputs)]
