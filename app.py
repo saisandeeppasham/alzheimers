@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as numpy
 app = Flask(__name__,template_folder='templates')
-model_rf = pickle.load(open('model_gb.pkl', 'rb'))
+model_gb = pickle.load(open('model_gb.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -30,7 +30,7 @@ def predict():
     dic=[]
     dic.append([Name,Email,Phone,gender,i2,i3,i4,i5,i6,i7,i8])
     inputs=[[i1,i2,i3,i4,i5,i6,i7,i8]]
-    x4=model_rf.predict(inputs)[0]
+    x4=model_gb.predict(inputs)[0]
     if  x4==1:
         result='Demented'
     else:
