@@ -13,7 +13,6 @@ def predict():
     Name=str(request.form.get('Name'))
     Email=str(request.form.get('Email'))
     Phone=str(request.form.get('Phone'))
-    
     gender=str(request.form.get('M/F'))
     
     i2=float(request.form.get('Age'))
