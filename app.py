@@ -13,7 +13,7 @@ def predict():
     Name=str(request.form.get('Name'))
     Email=str(request.form.get('Email'))
     Phone=str(request.form.get('Phone'))
-    gender=str(request.form.get('M/F')).lower()
+    gender=str(request.form.get('M/F'))
     
     i2=float(request.form.get('Age'))
     i3=float(request.form.get('Educ'))
@@ -23,7 +23,7 @@ def predict():
     i7=float(request.form.get('nWBV'))
     i8=float(request.form.get('ASF'))
     i1=-1
-    if gender=='m' or gender=='male':
+    if gender.lower()=='m' or gender.lower()=='male':
         i1=1
     else:
         i1=0
