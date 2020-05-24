@@ -13,25 +13,28 @@ def predict():
     Name=str(request.form.get('Name'))
     Email=str(request.form.get('Email'))
     Phone=str(request.form.get('Phone'))
-    gender=str(request.form.get('M/F'))
+    gender=str(request.form.get('M/F')).lower()
     
-    i2=float(request.form.get('Age'))
-    i3=float(request.form.get('Educ'))
-    i4=float(request.form.get('SES'))
-    i5=float(request.form.get('MMSE'))
-    i6=float(request.form.get('eTIV'))
-    i7=float(request.form.get('nWBV'))
-    i8=float(request.form.get('ASF'))
-    i1=-1
-    if gender.lower()=='m' or gender.lower()=='male':
-        i1=1
+    age=float(request.form.get('Age'))
+    educ=float(request.form.get('Educ'))
+    ses=float(request.form.get('SES'))
+    mmse=float(request.form.get('MMSE'))
+    etiv=float(request.form.get('eTIV'))
+    nwbv=float(request.form.get('nWBV'))
+    asf=float(request.form.get('ASF'))
+    m_f=-1
+    if gender=='m' or gender=='male':
+        m_f=1
     else:
-        i1=0
+        m_f=0
     dic=[]
-    dic.append([Name,Email,Phone,gender,i2,i3,i4,i5,i6,i7,i8])
-    inputs=[[i1,i2,i3,i4,i5,i6,i7,i8]]
-    x4=model_gb.predict(inputs)[0]
-    if  x4==1:
+    dic.append([Name,Email,Phone,gender,age,educ,ses,mmse,etiv,nwbv,asf])
+    
+    inputs=[[m_f,age,educ,ses,mmse,etiv,nwbv,asf]]
+    
+    output_gb=model_gb.predict(inputs)[0]
+    
+    if output_gb==1:
         result='Demented'
     else:
         result='Non-Demented'
