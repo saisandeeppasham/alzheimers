@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as numpy
 app = Flask(__name__,template_folder='templates')
-model_gb = pickle.load(open('model.pkl', 'rb'))
+model_gb = pickle.load(open('model1.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
